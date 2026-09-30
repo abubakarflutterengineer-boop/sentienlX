@@ -1,0 +1,4 @@
+import 'package:flutter/material.dart';
+import 'package:qr_flutter/qr_flutter.dart';
+import '../constants/app_colors.dart';
+class AppQrCard extends StatelessWidget { const AppQrCard({super.key}); @override Widget build(BuildContext c)=>Container(padding:const EdgeInsets.all(18),decoration:BoxDecoration(color:Colors.white,borderRadius:BorderRadius.circular(20),border:Border.all(color:AppColors.border)),child:Row(children:[QrImageView(data:'SentinelX',version:QrVersions.auto,size:105),const SizedBox(width:18),const Expanded(child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[Text('SentinelX QR',style:TextStyle(fontSize:17,fontWeight:FontWeight.w800)),SizedBox(height:7),Text('This QR identifies the app. The Share App button sends the installed APK through Android\'s system share sheet.',style:TextStyle(color:AppColors.secondaryText,height:1.4))]))])); }

@@ -1,0 +1,3 @@
+import 'package:flutter/material.dart';
+import '../constants/app_colors.dart';
+class PrimaryButton extends StatelessWidget { final String text; final IconData icon; final VoidCallback? onPressed; const PrimaryButton({super.key,required this.text,required this.icon,required this.onPressed}); @override Widget build(BuildContext c)=>SizedBox(height:54,width:double.infinity,child:ElevatedButton.icon(onPressed:onPressed,icon:Icon(icon),label:Text(text,style:const TextStyle(fontWeight:FontWeight.w800)),style:ElevatedButton.styleFrom(backgroundColor:AppColors.primary,foregroundColor:Colors.white,shape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(15)),elevation:0))); }
